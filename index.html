@@ -5,17 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>E-Portfolio Dewi Nur Ovilia</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
 *{
   margin:0;
   padding:0;
   box-sizing:border-box;
-  font-family:'Poppins',sans-serif
+  font-family:'Poppins',sans-serif;
 }
 
-/* 🔥 BACKGROUND */
+/* BACKGROUND */
 body{
   background: linear-gradient(135deg, #667eea, #764ba2);
   color:#0f172a;
@@ -25,12 +25,10 @@ body{
 .navbar{
   position:fixed;
   top:0;
-  left:0;
   width:100%;
   background: rgba(15, 23, 42, 0.5);
   backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(255,255,255,0.1);
+  border-bottom:1px solid rgba(255,255,255,0.1);
   color:white;
   display:flex;
   justify-content:space-between;
@@ -59,28 +57,42 @@ body{
   background:#2563eb;
 }
 
-/* MAIN */
-.main{
-  margin-top:80px;
-}
-
-/* HEADER */
-header{
-  height:60vh;
+/* HERO */
+.hero{
+  height:100vh;
   background:
     linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
-    url('img/unirow.jpg') center/cover;
-  color:white;
+    url('img/hero.png') center/cover no-repeat;
   display:flex;
-  flex-direction:column;
   justify-content:center;
   align-items:center;
   text-align:center;
+  color:white;
 }
 
-#typing{
-  font-size:42px;
-  font-weight:600;
+.hero-content h1{
+  font-size:60px;
+  font-weight:700;
+}
+
+.hero-content p{
+  margin-top:15px;
+  font-size:18px;
+}
+
+.hero-content p::before{
+  content:"";
+  display:block;
+  width:120px;
+  height:4px;
+  background:#facc15;
+  margin:20px auto;
+  border-radius:10px;
+}
+
+/* MAIN */
+.main{
+  margin-top:80px;
 }
 
 /* SECTION */
@@ -122,9 +134,9 @@ footer{
 
 <body>
 
-<!-- 🔥 NAVBAR -->
+<!-- NAVBAR -->
 <nav class="navbar">
-  <h2>E-Portfolio PPG</h2>
+  <h2>E-Portfolio</h2>
   <div class="menu">
     <a href="#profil">Profil</a>
     <a href="#latar">Latar</a>
@@ -140,16 +152,19 @@ footer{
   </div>
 </nav>
 
-<div class="main">
-
-<header>
-<h1 id="typing"></h1>
-<p>E-Portfolio Pendidikan Profesi Guru</p>
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-content">
+    <h1 id="typing"></h1>
+    <p>E-Portfolio Pendidikan Profesi Guru</p>
+  </div>
 </header>
 
+<div class="main">
+
 <section id="profil"><div class="card">
-<h2>Profil Mahasiswa</h2>
-<p>Nama: DEWI NUR OVILIA<br>Institusi: UNIROW<br>Bidang Studi: PPG PGSD</p>
+<h2>Profil</h2>
+<p>DEWI NUR OVILIA - UNIROW - PPG PGSD</p>
 </div></section>
 
 <section id="latar"><div class="card">
@@ -169,7 +184,7 @@ footer{
 
 <section id="analisis"><div class="card">
 <h2>Analisis</h2>
-<p>Analisis artefak pembelajaran.</p>
+<p>Analisis pembelajaran.</p>
 </div></section>
 
 <section id="refleksi"><div class="card">
@@ -189,7 +204,7 @@ footer{
 
 <section id="model"><div class="card">
 <h2>Model Guru</h2>
-<p>Profesional dan inovatif.</p>
+<p>Profesional & inovatif.</p>
 </div></section>
 
 <section id="kesimpulan"><div class="card">
@@ -220,7 +235,7 @@ function typing(){
 }
 typing();
 
-/* animasi scroll */
+/* scroll animasi */
 const sections=document.querySelectorAll('section');
 const links=document.querySelectorAll('.menu a');
 
@@ -251,9 +266,8 @@ links.forEach(link=>{
   });
 });
 
-/* navbar blur saat scroll */
+/* navbar scroll effect */
 const navbar=document.querySelector('.navbar');
-
 window.addEventListener('scroll',()=>{
   if(window.scrollY>50){
     navbar.classList.add('scrolled');
