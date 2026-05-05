@@ -7,19 +7,110 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
-body{display:flex;background:#f1f5f9;color:#0f172a}
-.sidebar{position:fixed;left:0;top:0;height:100%;width:250px;background:#0f172a;color:white;padding:20px}
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif
+}
+
+/* 🔥 BACKGROUND BARU (GRADIENT MODERN) */
+body{
+  display:flex;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color:#0f172a;
+}
+
+/* SIDEBAR */
+.sidebar{
+  position:fixed;
+  left:0;
+  top:0;
+  height:100%;
+  width:250px;
+  background:#0f172a;
+  color:white;
+  padding:20px;
+}
+
 .sidebar h2{margin-bottom:20px}
-.sidebar a{display:block;color:white;text-decoration:none;padding:10px;border-radius:8px;margin:5px 0}
-.sidebar a.active,.sidebar a:hover{background:#2563eb}
-.main{margin-left:250px;width:100%}
-header{height:60vh;background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url('img/unirow.jpg') center/cover;color:white;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center}
-#typing{font-size:42px;font-weight:600}
-section{padding:60px 40px;max-width:900px;margin:auto;opacity:0;transform:translateY(40px);transition:0.6s}
-section.show{opacity:1;transform:translateY(0)}
-.card{background:white;padding:25px;border-radius:12px;box-shadow:0 8px 20px rgba(0,0,0,0.08);margin:20px 0}
-footer{background:#0f172a;color:white;text-align:center;padding:20px}
+
+.sidebar a{
+  display:block;
+  color:white;
+  text-decoration:none;
+  padding:10px;
+  border-radius:8px;
+  margin:5px 0;
+  transition:0.3s;
+}
+
+.sidebar a.active,
+.sidebar a:hover{
+  background:#2563eb;
+}
+
+/* MAIN */
+.main{
+  margin-left:250px;
+  width:100%;
+}
+
+/* HEADER */
+header{
+  height:60vh;
+  background:
+    linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+    url('img/unirow.jpg') center/cover;
+  color:white;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
+
+#typing{
+  font-size:42px;
+  font-weight:600;
+}
+
+/* 🔥 SECTION LEBIH HIDUP */
+section{
+  padding:60px 40px;
+  max-width:900px;
+  margin:30px auto;
+  opacity:0;
+  transform:translateY(40px);
+  transition:0.6s;
+
+  background: rgba(255,255,255,0.08);
+  border-radius:20px;
+}
+
+/* animasi muncul */
+section.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* 🔥 CARD GLASS EFFECT */
+.card{
+  background: rgba(255,255,255,0.9);
+  backdrop-filter: blur(10px);
+  padding:25px;
+  border-radius:15px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.15);
+  margin:20px 0;
+}
+
+/* FOOTER */
+footer{
+  background:#0f172a;
+  color:white;
+  text-align:center;
+  padding:20px;
+}
 </style>
 </head>
 
@@ -52,73 +143,71 @@ footer{background:#0f172a;color:white;text-align:center;padding:20px}
 <p>
 Nama: DEWI NUR OVILIA<br>
 Institusi: UNIVERSITAS PGRI RONGGOLAWE<br>
-Bidang Studi: PPG PGSD<brD><br>
-Pernah menempuh kuliah di Universitas Terbuka, dengan mengambil jurusan atau progam studi PGSD. Mulai kuliah tahun 2015 dan lulus meraih gelar strata 1 PGSD pada tahun 2020. Pada tahun 2026 mengikuti progam pemerintah pendidikan profesi guru di Universitas PGRI Ronggolawe Tuban.
+Bidang Studi: PPG PGSD<br><br>
+Pernah menempuh kuliah di Universitas Terbuka, jurusan PGSD. Lulus tahun 2020. Tahun 2026 mengikuti program PPG di Universitas PGRI Ronggolawe Tuban.
 </p>
 </div></section>
 
 <section id="latar"><div class="card">
 <h2>Latar Belakang</h2>
 <p>
-Latar belakang saya berasal dari lingkungan yang menjunjung tinggi nilai pendidikan dan kedisiplinan. Hal ini mendorong saya untuk berkontribusi dalam dunia pendidikan sebagai agen perubahan yang mampu meningkatkan kualitas pembelajaran.
+Latar belakang saya berasal dari lingkungan yang menjunjung tinggi nilai pendidikan dan kedisiplinan.
 </p>
 </div></section>
 
 <section id="tujuan"><div class="card">
 <h2>Tujuan Menjadi Guru</h2>
 <p>
-Tujuan saya menjadi guru adalah untuk menciptakan pembelajaran yang bermakna, membangun karakter peserta didik, serta mempersiapkan generasi yang kompeten dan berakhlak mulia.
+Menciptakan pembelajaran bermakna dan membangun karakter siswa.
 </p>
 </div></section>
 
 <section id="artefak"><div class="card">
 <h2>Artefak Pembelajaran</h2>
-<p><b>Modul Ajar:</b> Dirancang sesuai kurikulum dan kebutuhan siswa.</p>
-<p><b>Video Pembelajaran:</b> Media visual untuk meningkatkan pemahaman.</p>
-<p><b>Media:</b> PPT/interaktif untuk mendukung pembelajaran.</p>
+<p><b>Modul Ajar:</b> sesuai kurikulum</p>
+<p><b>Video:</b> media visual</p>
+<p><b>Media:</b> PPT interaktif</p>
 </div></section>
 
 <section id="analisis"><div class="card">
 <h2>Analisis Artefak</h2>
 <p>
-Artefak dianalisis berdasarkan konteks, tujuan, serta kelebihan dan kekurangan. Analisis ini mengacu pada teori pembelajaran konstruktivisme untuk meningkatkan kualitas pembelajaran.
+Analisis berdasarkan tujuan dan teori pembelajaran.
 </p>
 </div></section>
 
 <section id="refleksi"><div class="card">
-<h2>Refleksi Pembelajaran</h2>
+<h2>Refleksi</h2>
 <p>
-Refleksi menunjukkan bahwa keberhasilan pembelajaran dipengaruhi oleh strategi, media, dan pendekatan. Saya terus melakukan perbaikan berkelanjutan.
+Pembelajaran terus diperbaiki secara berkelanjutan.
 </p>
 </div></section>
 
 <section id="praktik"><div class="card">
-<h2>Praktik Mengajar</h2>
+<h2>Praktik</h2>
 <p>
-Siklus 1: Adaptasi pembelajaran<br>
-Siklus 2: Pengembangan metode<br>
-Siklus 3: Optimalisasi dan refleksi
+Siklus 1, 2, dan 3 pembelajaran.
 </p>
 </div></section>
 
 <section id="penilaian"><div class="card">
-<h2>Penilaian GP & DPL</h2>
+<h2>Penilaian</h2>
 <p>
-Penilaian menunjukkan peningkatan dalam perencanaan dan pelaksanaan pembelajaran serta kemampuan refleksi.
+Terjadi peningkatan kompetensi mengajar.
 </p>
 </div></section>
 
 <section id="model"><div class="card">
-<h2>Model Guru yang Dituju</h2>
+<h2>Model Guru</h2>
 <p>
-Guru profesional, inovatif, berintegritas, dan mampu menjadi teladan bagi peserta didik.
+Profesional, inovatif, dan berintegritas.
 </p>
 </div></section>
 
 <section id="kesimpulan"><div class="card">
 <h2>Kesimpulan</h2>
 <p>
-E-portfolio ini menunjukkan perkembangan kompetensi saya sebagai calon guru profesional yang siap berkontribusi dalam dunia pendidikan.
+Siap menjadi guru profesional.
 </p>
 </div></section>
 
@@ -135,18 +224,43 @@ E-portfolio ini menunjukkan perkembangan kompetensi saya sebagai calon guru prof
 <script>
 const text="DEWI NUR OVILIA";
 let i=0;
-function typing(){if(i<text.length){document.getElementById("typing").innerHTML+=text.charAt(i);i++;setTimeout(typing,80)}}typing();
+function typing(){
+  if(i<text.length){
+    document.getElementById("typing").innerHTML+=text.charAt(i);
+    i++;
+    setTimeout(typing,80);
+  }
+}
+typing();
+
 const sections=document.querySelectorAll('section');
 const links=document.querySelectorAll('.sidebar a');
+
 window.addEventListener('scroll',()=>{
  let current='';
  sections.forEach(sec=>{
   const offset=sec.offsetTop-100;
-  if(window.scrollY>=offset){current=sec.id;sec.classList.add('show')}
+  if(window.scrollY>=offset){
+    current=sec.id;
+    sec.classList.add('show');
+  }
  });
- links.forEach(a=>{a.classList.remove('active');if(a.getAttribute('href')==='#'+current){a.classList.add('active')}})
+
+ links.forEach(a=>{
+   a.classList.remove('active');
+   if(a.getAttribute('href')==='#'+current){
+     a.classList.add('active');
+   }
+ });
 });
-links.forEach(link=>{link.addEventListener('click',e=>{e.preventDefault();document.querySelector(link.getAttribute('href')).scrollIntoView({behavior:'smooth'})})});
+
+links.forEach(link=>{
+  link.addEventListener('click',e=>{
+    e.preventDefault();
+    document.querySelector(link.getAttribute('href'))
+    .scrollIntoView({behavior:'smooth'});
+  });
+});
 </script>
 
 </body>
