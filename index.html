@@ -15,41 +15,25 @@
   font-family:'Poppins',sans-serif;
 }
 
-/* 🔥 BACKGROUND GLASS */
+/* 🔥 BACKGROUND CERAH */
 body{
   min-height:100vh;
   background:
-    radial-gradient(circle at 20% 30%, rgba(255,255,255,0.15), transparent 40%),
-    radial-gradient(circle at 80% 70%, rgba(255,255,255,0.1), transparent 40%),
-    linear-gradient(135deg, #0f172a, #1e293b);
+    radial-gradient(circle at 20% 30%, rgba(255,255,255,0.8), transparent 40%),
+    radial-gradient(circle at 80% 70%, rgba(255,255,255,0.6), transparent 40%),
+    linear-gradient(135deg, #e0f2fe, #f8fafc);
   overflow-x:hidden;
 }
-
-/* floating glass */
-body::before,
-body::after{
-  content:"";
-  position:fixed;
-  width:300px;
-  height:300px;
-  border-radius:50%;
-  background:rgba(255,255,255,0.08);
-  backdrop-filter: blur(40px);
-  z-index:-1;
-}
-
-body::before{ top:-100px; left:-100px; }
-body::after{ bottom:-100px; right:-100px; }
 
 /* 🔥 NAVBAR */
 .navbar{
   position:fixed;
   top:0;
   width:100%;
-  background: rgba(15, 23, 42, 0.5);
+  background: rgba(255,255,255,0.6);
   backdrop-filter: blur(12px);
-  border-bottom:1px solid rgba(255,255,255,0.1);
-  color:white;
+  border-bottom:1px solid rgba(0,0,0,0.1);
+  color:#1e293b;
   display:flex;
   justify-content:space-between;
   align-items:center;
@@ -59,11 +43,11 @@ body::after{ bottom:-100px; right:-100px; }
 }
 
 .navbar.scrolled{
-  background: rgba(15, 23, 42, 0.85);
+  background: rgba(255,255,255,0.9);
 }
 
 .menu a{
-  color:white;
+  color:#1e293b;
   text-decoration:none;
   margin:0 8px;
   padding:8px 12px;
@@ -74,20 +58,21 @@ body::after{ bottom:-100px; right:-100px; }
 
 .menu a:hover,
 .menu a.active{
-  background:#2563eb;
+  background:#3b82f6;
+  color:white;
 }
 
 /* 🔥 HERO */
 .hero{
   height:100vh;
   background:
-    linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+    linear-gradient(rgba(255,255,255,0.6),rgba(255,255,255,0.6)),
     url('img/hero.png') center/cover no-repeat;
   display:flex;
   justify-content:center;
   align-items:center;
   text-align:center;
-  color:white;
+  color:#1e293b;
 }
 
 .hero-content h1{
@@ -114,18 +99,16 @@ body::after{ bottom:-100px; right:-100px; }
   margin-top:80px;
 }
 
-/* 🔥 SECTION GLASS */
+/* 🔥 SECTION */
 section{
   padding:60px 40px;
   max-width:900px;
   margin:30px auto;
-
-  background: rgba(255,255,255,0.08);
-  backdrop-filter: blur(20px);
-  border:1px solid rgba(255,255,255,0.15);
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(15px);
+  border:1px solid rgba(0,0,0,0.08);
   border-radius:20px;
-  box-shadow:0 20px 40px rgba(0,0,0,0.3);
-
+  box-shadow:0 10px 30px rgba(0,0,0,0.1);
   opacity:0;
   transform:translateY(40px);
   transition:0.6s;
@@ -136,26 +119,23 @@ section.show{
   transform:translateY(0);
 }
 
-/* 🔥 CARD GLASS */
-.card{
-  background: rgba(255,255,255,0.15);
-  backdrop-filter: blur(15px);
-  border:1px solid rgba(255,255,255,0.2);
-  padding:25px;
-  border-radius:15px;
-  box-shadow:0 10px 30px rgba(0,0,0,0.2);
+section:hover{
+  transform:translateY(-8px) scale(1.01);
 }
 
-/* hover efek */
-section:hover{
-  transform:translateY(-5px);
-  box-shadow:0 30px 60px rgba(0,0,0,0.4);
+/* 🔥 CARD */
+.card{
+  background: rgba(255,255,255,0.85);
+  border:1px solid rgba(0,0,0,0.08);
+  padding:25px;
+  border-radius:15px;
+  box-shadow:0 5px 20px rgba(0,0,0,0.08);
 }
 
 /* FOOTER */
 footer{
-  background:#0f172a;
-  color:white;
+  background:#f1f5f9;
+  color:#334155;
   text-align:center;
   padding:20px;
 }
@@ -244,8 +224,8 @@ footer{
 
 <section id="kontak"><div class="card">
 <h2>Kontak</h2>
-<p>Email: [email]</p>
-<p>WA: [nomor]</p>
+<p>Email: emailkamu@gmail.com</p>
+<p>WA: 08xxxxxxxxxx</p>
 </div></section>
 
 <footer>© 2026 E-Portfolio PPG</footer>
