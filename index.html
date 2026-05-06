@@ -15,7 +15,7 @@
   font-family:'Poppins',sans-serif;
 }
 
-/* 🔥 BACKGROUND CERAH */
+/* BACKGROUND */
 body{
   min-height:100vh;
   background:
@@ -25,7 +25,7 @@ body{
   overflow-x:hidden;
 }
 
-/* 🔥 NAVBAR */
+/* NAVBAR */
 .navbar{
   position:fixed;
   top:0;
@@ -46,10 +46,15 @@ body{
   background: rgba(255,255,255,0.9);
 }
 
+.menu{
+  display:flex;
+  flex-wrap:wrap;
+}
+
 .menu a{
   color:#1e293b;
   text-decoration:none;
-  margin:0 8px;
+  margin:5px;
   padding:8px 12px;
   border-radius:8px;
   font-size:14px;
@@ -62,7 +67,7 @@ body{
   color:white;
 }
 
-/* 🔥 HERO */
+/* HERO */
 .hero{
   height:100vh;
   background:
@@ -73,6 +78,13 @@ body{
   align-items:center;
   text-align:center;
   color:#1e293b;
+}
+
+.hero-content{
+  background:rgba(255,255,255,0.5);
+  padding:40px;
+  border-radius:20px;
+  backdrop-filter:blur(10px);
 }
 
 .hero-content h1{
@@ -99,10 +111,10 @@ body{
   margin-top:80px;
 }
 
-/* 🔥 SECTION */
+/* SECTION */
 section{
   padding:60px 40px;
-  max-width:900px;
+  max-width:1000px;
   margin:30px auto;
   background: rgba(255,255,255,0.7);
   backdrop-filter: blur(15px);
@@ -123,7 +135,7 @@ section:hover{
   transform:translateY(-8px) scale(1.01);
 }
 
-/* 🔥 CARD */
+/* CARD */
 .card{
   background: rgba(255,255,255,0.85);
   border:1px solid rgba(0,0,0,0.08);
@@ -132,12 +144,103 @@ section:hover{
   box-shadow:0 5px 20px rgba(0,0,0,0.08);
 }
 
+/* PROFIL */
+.profil-box{
+  display:flex;
+  align-items:center;
+  gap:40px;
+  flex-wrap:wrap;
+}
+
+.profil-img{
+  flex:1;
+  text-align:center;
+}
+
+.profil-img img{
+  width:280px;
+  height:280px;
+  object-fit:cover;
+  border-radius:50%;
+  border:6px solid rgba(255,255,255,0.8);
+  box-shadow:0 10px 30px rgba(0,0,0,0.15);
+  transition:0.4s;
+}
+
+.profil-img img:hover{
+  transform:scale(1.05) rotate(2deg);
+}
+
+.profil-text{
+  flex:2;
+}
+
+.profil-text h3{
+  font-size:32px;
+  margin:15px 0;
+  color:#2563eb;
+}
+
+.profil-text p{
+  margin-bottom:15px;
+  line-height:1.8;
+  color:#334155;
+}
+
+.btn-profil{
+  padding:12px 24px;
+  border:none;
+  border-radius:30px;
+  background:linear-gradient(135deg,#3b82f6,#2563eb);
+  color:white;
+  font-weight:600;
+  cursor:pointer;
+  box-shadow:0 10px 20px rgba(37,99,235,0.3);
+  transition:0.3s;
+}
+
+.btn-profil:hover{
+  transform:translateY(-4px);
+}
+
 /* FOOTER */
 footer{
   background:#f1f5f9;
   color:#334155;
   text-align:center;
   padding:20px;
+  margin-top:40px;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+
+.hero-content h1{
+  font-size:40px;
+}
+
+.navbar{
+  padding:15px;
+}
+
+.menu{
+  justify-content:center;
+}
+
+section{
+  padding:40px 20px;
+}
+
+.profil-box{
+  flex-direction:column;
+  text-align:center;
+}
+
+.profil-img img{
+  width:220px;
+  height:220px;
+}
+
 }
 </style>
 </head>
@@ -147,6 +250,7 @@ footer{
 <!-- NAVBAR -->
 <nav class="navbar">
   <h2>E-Portfolio</h2>
+
   <div class="menu">
     <a href="#profil">Profil</a>
     <a href="#latar">Latar</a>
@@ -172,71 +276,124 @@ footer{
 
 <div class="main">
 
-<section id="profil"><div class="card">
-<h2>Profil</h2>
-<p>DEWI NUR OVILIA/<p>
-<p>Pernah menempuh kuliah di Universitas Terbuka, dengan mengambil jurusan atau progam studi PGSD. Mulai kuliah tahun 2015 dan lulus meraih gelar strata 1 PGSD pada tahun 2020. Pada tahun 2026 mengikuti progam pemerintah pendidikan profesi guru di Universitas PGRI Ronggolawe Tuban.<p>
-</div></section>
+<!-- PROFIL -->
+<section id="profil">
+<div class="card profil-box">
 
-<section id="latar"><div class="card">
+<div class="profil-img">
+  <img src="img/profil.png" alt="Foto Profil">
+</div>
+
+<div class="profil-text">
+
+  <h2>Profil</h2>
+
+  <h3>DEWI NUR OVILIA</h3>
+
+  <p>
+    Pernah menempuh kuliah di Universitas Terbuka,
+    dengan mengambil jurusan PGSD.
+    Mulai kuliah tahun 2015 dan lulus meraih
+    gelar strata 1 PGSD pada tahun 2020.
+  </p>
+
+  <p>
+    Pada tahun 2026 mengikuti Program Pendidikan
+    Profesi Guru di Universitas PGRI Ronggolawe Tuban.
+  </p>
+
+  <button class="btn-profil">
+    Guru Profesional & Inovatif
+  </button>
+
+</div>
+</div>
+</section>
+
+<!-- SECTION -->
+<section id="latar">
+<div class="card">
 <h2>Latar Belakang</h2>
 <p>Latar belakang pendidikan dan pengalaman.</p>
-</div></section>
+</div>
+</section>
 
-<section id="tujuan"><div class="card">
+<section id="tujuan">
+<div class="card">
 <h2>Tujuan</h2>
 <p>Menjadi guru profesional.</p>
-</div></section>
+</div>
+</section>
 
-<section id="artefak"><div class="card">
+<section id="artefak">
+<div class="card">
 <h2>Artefak</h2>
 <p>Modul, video, media pembelajaran.</p>
-</div></section>
+</div>
+</section>
 
-<section id="analisis"><div class="card">
+<section id="analisis">
+<div class="card">
 <h2>Analisis</h2>
 <p>Analisis pembelajaran.</p>
-</div></section>
+</div>
+</section>
 
-<section id="refleksi"><div class="card">
+<section id="refleksi">
+<div class="card">
 <h2>Refleksi</h2>
 <p>Perbaikan berkelanjutan.</p>
-</div></section>
+</div>
+</section>
 
-<section id="praktik"><div class="card">
+<section id="praktik">
+<div class="card">
 <h2>Praktik</h2>
 <p>Siklus pembelajaran.</p>
-</div></section>
+</div>
+</section>
 
-<section id="penilaian"><div class="card">
+<section id="penilaian">
+<div class="card">
 <h2>Penilaian</h2>
 <p>Peningkatan kompetensi.</p>
-</div></section>
+</div>
+</section>
 
-<section id="model"><div class="card">
+<section id="model">
+<div class="card">
 <h2>Model Guru</h2>
 <p>Profesional & inovatif.</p>
-</div></section>
+</div>
+</section>
 
-<section id="kesimpulan"><div class="card">
+<section id="kesimpulan">
+<div class="card">
 <h2>Kesimpulan</h2>
 <p>Siap menjadi guru.</p>
-</div></section>
+</div>
+</section>
 
-<section id="kontak"><div class="card">
+<section id="kontak">
+<div class="card">
 <h2>Kontak</h2>
 <p>Email: emailkamu@gmail.com</p>
 <p>WA: 08xxxxxxxxxx</p>
-</div></section>
+</div>
+</section>
 
-<footer>© 2026 E-Portfolio PPG</footer>
+<footer>
+© 2026 E-Portfolio PPG
+</footer>
 
 </div>
 
 <script>
-/* typing */
+
+/* TYPING */
 const text="DEWI NUR OVILIA";
 let i=0;
+
 function typing(){
   if(i<text.length){
     document.getElementById("typing").innerHTML+=text.charAt(i);
@@ -244,48 +401,70 @@ function typing(){
     setTimeout(typing,80);
   }
 }
+
 typing();
 
-/* scroll animasi */
+/* SCROLL ANIMATION */
 const sections=document.querySelectorAll('section');
 const links=document.querySelectorAll('.menu a');
 
 window.addEventListener('scroll',()=>{
+
  let current='';
+
  sections.forEach(sec=>{
+
   const offset=sec.offsetTop-120;
+
   if(window.scrollY>=offset){
     current=sec.id;
     sec.classList.add('show');
   }
+
  });
 
  links.forEach(a=>{
+
    a.classList.remove('active');
+
    if(a.getAttribute('href')==='#'+current){
      a.classList.add('active');
    }
+
  });
+
 });
 
-/* smooth scroll */
+/* SMOOTH SCROLL */
 links.forEach(link=>{
+
   link.addEventListener('click',e=>{
+
     e.preventDefault();
-    document.querySelector(link.getAttribute('href'))
-    .scrollIntoView({behavior:'smooth'});
+
+    document
+    .querySelector(link.getAttribute('href'))
+    .scrollIntoView({
+      behavior:'smooth'
+    });
+
   });
+
 });
 
-/* navbar effect */
+/* NAVBAR EFFECT */
 const navbar=document.querySelector('.navbar');
+
 window.addEventListener('scroll',()=>{
+
   if(window.scrollY>50){
     navbar.classList.add('scrolled');
   }else{
     navbar.classList.remove('scrolled');
   }
+
 });
+
 </script>
 
 </body>
