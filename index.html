@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>E-Portofolio Dewi Nur Ovilia</title>
@@ -10,6 +13,7 @@
 
 <style>
 
+/* RESET */
 *{
   margin:0;
   padding:0;
@@ -17,14 +21,13 @@
   font-family:'Poppins',sans-serif;
 }
 
-/* BACKGROUND */
+/* BODY */
 body{
-  min-height:100vh;
   background:
-    radial-gradient(circle at 20% 30%, rgba(255,255,255,0.8), transparent 10%),
-    radial-gradient(circle at 80% 70%, rgba(255,255,255,0.6), transparent 10%),
-    linear-gradient(135deg, #e0f2fe, #f8fafc);
+  radial-gradient(circle at top left, rgba(255,255,255,0.8), transparent 20%),
+  linear-gradient(135deg,#dbeafe,#f8fafc);
   overflow-x:hidden;
+  color:#1e293b;
 }
 
 /* NAVBAR */
@@ -32,24 +35,25 @@ body{
   position:fixed;
   top:0;
   width:100%;
-  background:rgba(255,255,255,0.7);
-  backdrop-filter:blur(12px);
-  border-bottom:1px solid rgba(0,0,0,0.1);
+  padding:15px 30px;
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:15px 30px;
+  background:rgba(255,255,255,0.7);
+  backdrop-filter:blur(12px);
   z-index:1000;
   transition:0.3s;
 }
 
 .navbar.scrolled{
-  background:rgba(255,255,255,0.95);
+  background:white;
+  box-shadow:0 5px 20px rgba(0,0,0,0.08);
 }
 
 .logo-home{
   text-decoration:none;
   color:#1e293b;
+  font-size:28px;
   font-weight:700;
 }
 
@@ -66,8 +70,8 @@ body{
   text-decoration:none;
   color:#1e293b;
   margin:5px;
-  padding:8px 12px;
-  border-radius:10px;
+  padding:10px 14px;
+  border-radius:12px;
   transition:0.3s;
   font-size:14px;
 }
@@ -82,8 +86,8 @@ body{
 .hero{
   height:100vh;
   background:
-    linear-gradient(rgba(255,255,255,0.3),rgba(255,255,255,0.3)),
-    url('img/hero.png') center/cover no-repeat;
+  linear-gradient(rgba(255,255,255,0.4),rgba(255,255,255,0.4)),
+  url('img/hero.png') center/cover no-repeat;
   display:flex;
   justify-content:center;
   align-items:center;
@@ -93,39 +97,38 @@ body{
 .hero-content{
   background:rgba(255,255,255,0.5);
   padding:40px;
-  border-radius:20px;
+  border-radius:25px;
   backdrop-filter:blur(10px);
+  box-shadow:0 10px 30px rgba(0,0,0,0.1);
 }
 
 .hero-content h1{
   font-size:60px;
-  color:#1e293b;
+  margin-bottom:20px;
 }
 
 .hero-content p{
-  margin-top:15px;
-  color:#334155;
-  font-size:18px;
+  font-size:20px;
 }
 
 /* MAIN */
 .main{
-  margin-top:80px;
+  margin-top:50px;
 }
 
 /* SECTION */
 section{
-  scroll-margin-top:120px;
+  max-width:1100px;
+  margin:40px auto;
   padding:60px 40px;
-  max-width:1000px;
-  margin:30px auto;
   background:rgba(255,255,255,0.7);
-  backdrop-filter:blur(15px);
-  border-radius:20px;
-  box-shadow:0 10px 30px rgba(0,0,0,0.1);
+  backdrop-filter:blur(10px);
+  border-radius:25px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
   opacity:0;
   transform:translateY(40px);
-  transition:0.6s;
+  transition:0.7s;
+  scroll-margin-top:120px;
 }
 
 section.show{
@@ -133,18 +136,19 @@ section.show{
   transform:translateY(0);
 }
 
+/* CARD */
 .card{
-  background:rgba(255,255,255,0.85);
-  padding:25px;
+  background:white;
   border-radius:20px;
-  box-shadow:0 5px 20px rgba(0,0,0,0.08);
+  padding:30px;
+  box-shadow:0 5px 20px rgba(0,0,0,0.05);
 }
 
 /* PROFIL */
 .profil-box{
   display:flex;
-  gap:40px;
   align-items:center;
+  gap:40px;
   flex-wrap:wrap;
 }
 
@@ -156,15 +160,10 @@ section.show{
 .profil-img img{
   width:280px;
   height:280px;
-  object-fit:cover;
   border-radius:50%;
-  border:6px solid rgba(255,255,255,0.8);
+  object-fit:cover;
+  border:6px solid white;
   box-shadow:0 10px 30px rgba(0,0,0,0.15);
-  transition:0.4s;
-}
-
-.profil-img img:hover{
-  transform:scale(1.05);
 }
 
 .profil-text{
@@ -172,34 +171,39 @@ section.show{
 }
 
 .profil-text h3{
-  color:#2563eb;
-  margin:15px 0;
   font-size:32px;
+  margin:15px 0;
+  color:#2563eb;
 }
 
 .profil-text p{
-  line-height:1.8;
+  line-height:1.9;
   margin-bottom:15px;
-  color:#334155;
 }
 
 .btn-profil{
   padding:12px 24px;
   border:none;
   border-radius:30px;
-  background:linear-gradient(135deg,#2563eb,#3b82f6);
+  background:#2563eb;
   color:white;
   font-weight:600;
-  cursor:pointer;
+}
+
+/* IMAGE */
+.img-daerah{
+  width:100%;
+  border-radius:20px;
+  margin:20px 0;
+  box-shadow:0 10px 25px rgba(0,0,0,0.1);
 }
 
 /* KEUNIKAN */
 .keunikan-item{
-  margin-top:40px;
+  margin-top:35px;
   padding:20px;
-  background:rgba(255,255,255,0.7);
   border-radius:20px;
-  box-shadow:0 5px 20px rgba(0,0,0,0.08);
+  background:#f8fafc;
 }
 
 .keunikan-item h3{
@@ -209,15 +213,6 @@ section.show{
 
 .keunikan-item p{
   line-height:1.8;
-  color:#334155;
-}
-
-/* IMAGE */
-.img-daerah{
-  width:100%;
-  border-radius:20px;
-  margin-bottom:20px;
-  box-shadow:0 5px 20px rgba(0,0,0,0.1);
 }
 
 /* INSPIRASI */
@@ -235,16 +230,10 @@ section.show{
 .inspirasi-foto img{
   width:100%;
   border-radius:25px;
-  box-shadow:0 10px 30px rgba(0,0,0,0.15);
 }
 
 .inspirasi-text{
   flex:2;
-}
-
-.inspirasi-text h3{
-  color:#2563eb;
-  margin:20px 0;
 }
 
 .inspirasi-text p{
@@ -253,11 +242,10 @@ section.show{
 }
 
 .tujuan-item{
-  margin-top:25px;
+  margin-top:20px;
   padding:20px;
   border-radius:18px;
-  background:rgba(255,255,255,0.7);
-  box-shadow:0 5px 15px rgba(0,0,0,0.08);
+  background:#f8fafc;
 }
 
 /* LPTK */
@@ -269,22 +257,16 @@ section.show{
 
 .lptk-image{
   flex:1;
-  min-width:300px;
+  min-width:280px;
 }
 
 .lptk-image img{
   width:100%;
   border-radius:25px;
-  box-shadow:0 10px 30px rgba(0,0,0,0.15);
 }
 
 .lptk-content{
   flex:2;
-}
-
-.lptk-content h3{
-  color:#2563eb;
-  margin:15px 0;
 }
 
 .lptk-content p{
@@ -294,9 +276,8 @@ section.show{
 
 .maps-box{
   margin-top:25px;
-  overflow:hidden;
   border-radius:20px;
-  box-shadow:0 10px 25px rgba(0,0,0,0.12);
+  overflow:hidden;
 }
 
 .maps-box iframe{
@@ -307,22 +288,25 @@ section.show{
 
 /* FOOTER */
 footer{
-  background:#f1f5f9;
-  color:#334155;
   text-align:center;
-  padding:20px;
+  padding:30px;
+  background:white;
   margin-top:40px;
 }
 
 /* RESPONSIVE */
 @media(max-width:768px){
 
-.hero-content h1{
-  font-size:40px;
+.navbar{
+  flex-direction:column;
 }
 
 .menu{
   justify-content:center;
+}
+
+.hero-content h1{
+  font-size:40px;
 }
 
 .profil-box,
@@ -336,9 +320,14 @@ footer{
   height:220px;
 }
 
+section{
+  padding:40px 20px;
+}
+
 }
 
 </style>
+
 </head>
 
 <body>
@@ -356,45 +345,25 @@ E-Portfolio
 
 <a href="#profil">Profil</a>
 
-<a href="#inspirasi-tujuan">
-Inspirasi & Tujuan
-</a>
+<a href="#keunikan-daerah">Keunikan</a>
 
-<a href="#keunikan-daerah">
-Keunikan Daerah
-</a>
+<a href="#inspirasi-tujuan">Inspirasi</a>
 
-<a href="#artefak">
-Artefak
-</a>
+<a href="#artefak">Artefak</a>
 
-<a href="#lptk">
-LPTK
-</a>
+<a href="#lptk">LPTK</a>
 
-<a href="#refleksi">
-Refleksi
-</a>
+<a href="#refleksi">Refleksi</a>
 
-<a href="#praktik">
-Praktik
-</a>
+<a href="#praktik">Praktik</a>
 
-<a href="#penilaian">
-Penilaian
-</a>
+<a href="#penilaian">Penilaian</a>
 
-<a href="#model">
-Model
-</a>
+<a href="#model">Model</a>
 
-<a href="#kesimpulan">
-Kesimpulan
-</a>
+<a href="#kesimpulan">Kesimpulan</a>
 
-<a href="#kontak">
-Kontak
-</a>
+<a href="#kontak">Kontak</a>
 
 </div>
 
@@ -424,7 +393,7 @@ E-Portfolio Pendidikan Profesi Guru
 
 <div class="profil-img">
 
-<img src="img/profil.png" alt="Foto Profil">
+<img src="img/profil.png" alt="Profil">
 
 </div>
 
@@ -463,59 +432,50 @@ PPG PRAJAB TAHUN 2026
 
 <h2>Keunikan Daerah Bojonegoro</h2>
 
-<p>
-Kabupaten Bojonegoro memiliki berbagai keunikan daerah
-yang menjadi ciri khas budaya, wisata, dan potensi alam.
-Berikut beberapa ikon terkenal dari Kabupaten Bojonegoro.
-</p>
-
 <div class="keunikan-item">
 
-<img src="img/ledre.jpg" alt="Ledre" class="img-daerah">
+<img src="img/ledre.jpg" class="img-daerah">
 
 <h3>Ledre</h3>
 
 <p>
-Ledre merupakan makanan khas Bojonegoro yang terbuat dari pisang
-dengan bentuk tipis dan renyah menyerupai semprong.
+Ledre merupakan makanan khas Bojonegoro.
 </p>
 
 </div>
 
 <div class="keunikan-item">
 
-<img src="img/kayangan-api.jpg" alt="Kayangan Api" class="img-daerah">
+<img src="img/kayangan-api.jpg" class="img-daerah">
 
 <h3>Kayangan Api</h3>
 
 <p>
-Kayangan Api adalah wisata alam terkenal berupa api abadi
-yang tidak pernah padam.
+Wisata api abadi terkenal di Bojonegoro.
 </p>
 
 </div>
 
 <div class="keunikan-item">
 
-<img src="img/migas.jpg" alt="Migas" class="img-daerah">
+<img src="img/migas.jpg" class="img-daerah">
 
 <h3>Migas</h3>
 
 <p>
-Bojonegoro dikenal sebagai salah satu daerah penghasil minyak
-dan gas bumi terbesar di Indonesia.
+Bojonegoro dikenal sebagai penghasil migas terbesar.
 </p>
 
 </div>
 
 <div class="keunikan-item">
 
-<img src="img/kayu-jati.jpg" alt="Kayu Jati" class="img-daerah">
+<img src="img/kayu-jati.jpg" class="img-daerah">
 
 <h3>Kayu Jati</h3>
 
 <p>
-Kayu jati Bojonegoro terkenal memiliki kualitas yang sangat baik.
+Kayu jati Bojonegoro terkenal berkualitas tinggi.
 </p>
 
 </div>
@@ -525,119 +485,32 @@ Kayu jati Bojonegoro terkenal memiliki kualitas yang sangat baik.
 </section>
 
 <!-- INSPIRASI -->
-<!-- SECTION INSPIRASI DAN TUJUAN -->
 <section id="inspirasi-tujuan">
 
 <div class="card inspirasi-layout">
 
-<!-- FOTO KIRI -->
 <div class="inspirasi-foto">
 
-<img src="img/inspirasi-ppg.jpg" alt="Inspirasi PPG">
+<img src="img/inspirasi-ppg.jpg">
 
 </div>
 
-<!-- ISI -->
 <div class="inspirasi-text">
 
 <h2>Inspirasi dan Tujuan</h2>
 
-<h3>Inspirasi Mengikuti PPG Prajabatan</h3>
-
 <p>
-Saya terinspirasi mengikuti Program Pendidikan Profesi Guru (PPG) Prajabatan
-karena memiliki keinginan kuat untuk menjadi pendidik profesional
-yang mampu memberikan dampak nyata bagi peserta didik.
-Guru bukan hanya sebagai penyampai materi,
-tetapi sebagai pembimbing, motivator,
-dan fasilitator dalam membentuk karakter generasi masa depan.
+Saya terinspirasi mengikuti Program Pendidikan Profesi Guru
+karena ingin menjadi guru profesional.
 </p>
-
-<p>
-Selain itu, perkembangan zaman yang pesat menuntut guru
-untuk adaptif terhadap teknologi dan inovasi pembelajaran.
-Hal ini mendorong saya untuk terus belajar dan meningkatkan kompetensi
-melalui program PPG agar dapat menciptakan pembelajaran
-yang kreatif, menyenangkan, dan bermakna.
-</p>
-
-<p>
-Inspirasi lainnya datang dari pentingnya peran guru
-dalam mewujudkan pendidikan yang berkualitas dan merata,
-terutama di tingkat sekolah dasar.
-Saya ingin berkontribusi dalam menciptakan lingkungan belajar
-yang inklusif, humanis, dan berpusat pada peserta didik.
-</p>
-
-<!-- TUJUAN -->
-<div class="tujuan-box">
-
-<h3>Tujuan Mengikuti PPG Prajabatan</h3>
-
-<div class="tujuan-item">
-<h4>Menjadi Guru Profesional</h4>
-
-<p>
-Mengembangkan kompetensi pedagogik, profesional,
-sosial, dan kepribadian sesuai standar guru di Indonesia.
-</p>
-
-</div>
 
 <div class="tujuan-item">
 
-<h4>Meningkatkan Kualitas Pembelajaran</h4>
+<h3>Menjadi Guru Profesional</h3>
 
 <p>
-Mampu merancang dan melaksanakan pembelajaran inovatif
-berbasis kurikulum terbaru yang berpusat pada peserta didik.
+Mengembangkan kompetensi pedagogik dan profesional.
 </p>
-
-</div>
-
-<div class="tujuan-item">
-
-<h4>Menguasai Teknologi Pendidikan</h4>
-
-<p>
-Memanfaatkan teknologi digital sebagai media pembelajaran
-yang efektif dan interaktif.
-</p>
-
-</div>
-
-<div class="tujuan-item">
-
-<h4>Membentuk Karakter Peserta Didik</h4>
-
-<p>
-Berperan aktif dalam menanamkan nilai-nilai karakter
-seperti disiplin, tanggung jawab, dan gotong royong.
-</p>
-
-</div>
-
-<div class="tujuan-item">
-
-<h4>Mengembangkan Diri Secara Berkelanjutan</h4>
-
-<p>
-Menjadi pembelajar sepanjang hayat yang terus meningkatkan kompetensi
-melalui refleksi dan pelatihan.
-</p>
-
-</div>
-
-<div class="tujuan-item">
-
-<h4>Siap Terjun ke Dunia Pendidikan</h4>
-
-<p>
-Memiliki kesiapan mental, keterampilan,
-dan pengalaman praktik mengajar di sekolah.
-</p>
-
-</div>
 
 </div>
 
@@ -646,95 +519,6 @@ dan pengalaman praktik mengajar di sekolah.
 </div>
 
 </section>
-
-<!-- CSS -->
-<style>
-
-.inspirasi-layout{
-  display:flex;
-  gap:40px;
-  align-items:flex-start;
-  flex-wrap:wrap;
-}
-
-.inspirasi-foto{
-  flex:1;
-  min-width:280px;
-  position:sticky;
-  top:120px;
-}
-
-.inspirasi-foto img{
-  width:100%;
-  border-radius:25px;
-  box-shadow:0 10px 30px rgba(0,0,0,0.15);
-  transition:0.4s;
-}
-
-.inspirasi-foto img:hover{
-  transform:scale(1.03);
-}
-
-.inspirasi-text{
-  flex:2;
-}
-
-.inspirasi-text h2{
-  margin-bottom:20px;
-}
-
-.inspirasi-text h3{
-  margin-top:20px;
-  margin-bottom:15px;
-  color:#2563eb;
-}
-
-.inspirasi-text p{
-  line-height:1.9;
-  margin-bottom:18px;
-  color:#334155;
-}
-
-.tujuan-box{
-  margin-top:40px;
-}
-
-.tujuan-item{
-  margin-top:25px;
-  padding:20px;
-  border-radius:18px;
-  background:rgba(255,255,255,0.7);
-  box-shadow:0 5px 15px rgba(0,0,0,0.08);
-  transition:0.4s;
-}
-
-.tujuan-item:hover{
-  transform:translateY(-5px);
-}
-
-.tujuan-item h4{
-  color:#2563eb;
-  margin-bottom:10px;
-  font-size:22px;
-}
-
-.tujuan-item p{
-  line-height:1.8;
-}
-
-/* RESPONSIVE */
-@media(max-width:768px){
-
-.inspirasi-layout{
-  flex-direction:column;
-}
-
-.inspirasi-foto{
-  position:relative;
-  top:0;
-}
-
-}
 
 <!-- ARTEFAK -->
 <section id="artefak">
@@ -747,11 +531,7 @@ dan pengalaman praktik mengajar di sekolah.
 
 <h3>Siklus 1</h3>
 
-<img src="img/siklus1.jpg" alt="Siklus 1" class="img-daerah">
-
-<p>
-Isi artefak siklus 1.
-</p>
+<img src="img/siklus1.jpg" class="img-daerah">
 
 </div>
 
@@ -759,11 +539,7 @@ Isi artefak siklus 1.
 
 <h3>Siklus 2</h3>
 
-<img src="img/siklus2.jpg" alt="Siklus 2" class="img-daerah">
-
-<p>
-Isi artefak siklus 2.
-</p>
+<img src="img/siklus2.jpg" class="img-daerah">
 
 </div>
 
@@ -771,11 +547,7 @@ Isi artefak siklus 2.
 
 <h3>Siklus 3</h3>
 
-<img src="img/siklus3.jpg" alt="Siklus 3" class="img-daerah">
-
-<p>
-Isi artefak siklus 3.
-</p>
+<img src="img/siklus3.jpg" class="img-daerah">
 
 </div>
 
@@ -790,30 +562,23 @@ Isi artefak siklus 3.
 
 <div class="lptk-image">
 
-<img src="img/lptk.jpg" alt="LPTK">
+<img src="img/lptk.jpg">
 
 </div>
 
 <div class="lptk-content">
 
-<h2>UNIROW</h2>
-
-<h3>
-Universitas PGRI Ronggolawe Tuban
-</h3>
+<h2>LPTK</h2>
 
 <p>
-Universitas PGRI Ronggolawe Tuban (UNIROW) merupakan salah satu perguruan tinggi yang berperan penting dalam mencetak generasi unggul, berkarakter, dan profesional di bidang pendidikan maupun nonkependidikan. Melalui berbagai program akademik dan pengembangan kompetensi, UNIROW terus berkomitmen menghadirkan pendidikan berkualitas yang adaptif terhadap perkembangan zaman dan teknologi.
-Sebagai Lembaga Pendidikan Tenaga Kependidikan (LPTK), UNIROW turut mendukung terciptanya calon guru profesional melalui Program Pendidikan Profesi Guru (PPG). Dengan lingkungan belajar yang inovatif, dosen yang kompeten, serta fasilitas pendukung yang memadai, UNIROW menjadi tempat berkembangnya calon pendidik yang kreatif, humanis, dan berintegritas.
-Selain unggul dalam bidang akademik, UNIROW juga menjunjung tinggi nilai kolaborasi, pengabdian kepada masyarakat, dan pengembangan karakter mahasiswa. Hal ini menjadikan UNIROW sebagai perguruan tinggi yang tidak hanya fokus pada ilmu pengetahuan, tetapi juga membentuk pribadi yang siap menghadapi tantangan dunia pendidikan dan kehidupan bermasyarakat.
+Universitas PGRI Ronggolawe Tuban merupakan salah satu
+LPTK penyelenggara Program Pendidikan Profesi Guru.
 </p>
 
 <div class="maps-box">
 
 <iframe
-src="https://www.google.com/maps?q=Universitas%20PGRI%20Ronggolawe%20Tuban&output=embed"
-allowfullscreen=""
-loading="lazy">
+src="https://www.google.com/maps?q=Universitas%20PGRI%20Ronggolawe%20Tuban&output=embed">
 </iframe>
 
 </div>
@@ -892,7 +657,7 @@ Profesional dan inovatif.
 <h2>Kesimpulan</h2>
 
 <p>
-Siap menjadi guru.
+Siap menjadi guru profesional.
 </p>
 
 </div>
@@ -923,100 +688,111 @@ Siap menjadi guru.
 <script>
 
 /* TYPING */
-const text="DEWI NUR OVILIA";
+const text = "DEWI NUR OVILIA";
 
-let i=0;
+let i = 0;
 
 function typing(){
 
-if(i<text.length){
+  if(i < text.length){
 
-document.getElementById("typing").innerHTML+=text.charAt(i);
+    document.getElementById("typing").innerHTML += text.charAt(i);
 
-i++;
+    i++;
 
-setTimeout(typing,80);
+    setTimeout(typing,80);
 
-}
+  }
 
 }
 
 typing();
 
-/* SECTION SHOW */
-const sections=document.querySelectorAll('section');
+/* SECTION */
+const sections = document.querySelectorAll('section');
 
-const links=document.querySelectorAll('.menu a');
+const links = document.querySelectorAll('.menu a');
 
 window.addEventListener('scroll',()=>{
 
-let current='';
+  let current='';
 
-sections.forEach(sec=>{
+  sections.forEach(sec=>{
 
-const offset=sec.offsetTop-150;
+    const offset = sec.offsetTop - 150;
 
-if(window.scrollY>=offset){
+    if(window.scrollY >= offset){
 
-current=sec.id;
+      current = sec.id;
 
-sec.classList.add('show');
+      sec.classList.add('show');
 
-}
+    }
 
-});
+  });
 
-links.forEach(a=>{
+  links.forEach(link=>{
 
-a.classList.remove('active');
+    link.classList.remove('active');
 
-if(a.getAttribute('href')==='#'+current){
+    if(link.getAttribute('href') === '#' + current){
 
-a.classList.add('active');
+      link.classList.add('active');
 
-}
+    }
 
-});
+  });
 
 });
 
 /* SMOOTH SCROLL */
 document.querySelectorAll('.menu a').forEach(link=>{
 
-link.addEventListener('click',function(e){
+  link.addEventListener('click',function(e){
 
-e.preventDefault();
+    e.preventDefault();
 
-const target=document.querySelector(
-this.getAttribute('href')
-);
+    const target = document.querySelector(
+      this.getAttribute('href')
+    );
 
-if(target){
+    if(target){
 
-target.scrollIntoView({
-behavior:'smooth'
+      target.scrollIntoView({
+        behavior:'smooth'
+      });
+
+    }
+
+  });
+
 });
 
-}
-
-});
-
-});
-
-/* NAVBAR EFFECT */
-const navbar=document.querySelector('.navbar');
+/* NAVBAR */
+const navbar = document.querySelector('.navbar');
 
 window.addEventListener('scroll',()=>{
 
-if(window.scrollY>50){
+  if(window.scrollY > 50){
 
-navbar.classList.add('scrolled');
+    navbar.classList.add('scrolled');
 
-}else{
+  }else{
 
-navbar.classList.remove('scrolled');
+    navbar.classList.remove('scrolled');
 
-}
+  }
+
+});
+
+/* AUTO SHOW */
+window.addEventListener('load',()=>{
+
+  sections.forEach(sec=>{
+
+    sec.classList.add('show');
+
+  });
 
 });
 
