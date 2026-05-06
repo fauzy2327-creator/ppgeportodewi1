@@ -696,17 +696,17 @@ Isi artefak siklus 3.
 
 <section id="lptk">
 
-<div class="card lptk-layout">
+<div class="card lptk-container">
 
-<!-- FOTO -->
-<div class="lptk-foto">
+<!-- FOTO KIRI -->
+<div class="lptk-image">
 
 <img src="img/lptk.jpg" alt="LPTK">
 
 </div>
 
-<!-- ISI -->
-<div class="lptk-text">
+<!-- KANAN -->
+<div class="lptk-content">
 
 <h2>LPTK</h2>
 
@@ -725,8 +725,9 @@ perguruan tinggi yang mendukung pengembangan kompetensi guru
 melalui pembelajaran inovatif, praktik lapangan,
 serta penguatan karakter pendidik profesional.
 </p>
+
 <!-- MAPS -->
-<div class="maps-container">
+<div class="maps-box">
 
 <iframe
 src="https://www.google.com/maps?q=Universitas%20PGRI%20Ronggolawe%20Tuban&output=embed"
@@ -740,6 +741,80 @@ loading="lazy">
 
 </div>
 
+</section>
+
+<!-- CSS -->
+<style>
+
+/* LPTK */
+.lptk-container{
+  display:flex;
+  gap:40px;
+  align-items:flex-start;
+  flex-wrap:wrap;
+}
+
+/* FOTO KIRI */
+.lptk-image{
+  flex:1;
+  min-width:300px;
+}
+
+.lptk-image img{
+  width:100%;
+  border-radius:25px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.15);
+  transition:0.4s;
+}
+
+.lptk-image img:hover{
+  transform:scale(1.03);
+}
+
+/* KANAN */
+.lptk-content{
+  flex:2;
+}
+
+.lptk-content h2{
+  margin-bottom:15px;
+}
+
+.lptk-content h3{
+  color:#2563eb;
+  margin-bottom:20px;
+}
+
+.lptk-content p{
+  line-height:1.9;
+  margin-bottom:18px;
+  color:#334155;
+}
+
+/* MAPS */
+.maps-box{
+  margin-top:25px;
+  border-radius:20px;
+  overflow:hidden;
+  box-shadow:0 10px 25px rgba(0,0,0,0.12);
+}
+
+.maps-box iframe{
+  width:100%;
+  height:320px;
+  border:none;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+
+.lptk-container{
+  flex-direction:column;
+}
+
+}
+
+</style>
 </section>
 <section id="refleksi">
 <div class="card">
